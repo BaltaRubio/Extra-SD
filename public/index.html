@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Inicio</title>
+</head>
+<body>
+
+  
+    <div class="contenedorP">
+      <center>
+
+        <table class="tablos" id="tablitos">
+          <tr>
+            <th>
+              <div id="notificaciones" class="notificaciones"></div>
+            </th>
+          </tr>
+            
+              <div class="contenedor2">
+            <input id="mensaje" style="background: #00000000; border: #00000000;"><button id="enviar" ></button>
+              </div>
+            </div>
+        </table>
+        
+        <table class="tablos"> 
+          <tr>
+            <th><h1>DATOS DE LA PC</h1></th>
+          </tr>
+        </table>
+        <!---->
+        <table class="tablos">
+          <tr>
+            <th>
+              &#10132; Ancho de la resolución de tu pantalla: 
+              <script type="text/javascript">document.write(window.screen.width, " pixeles")
+              </script><br>
+              <!-- Hasta aqui Ancho de la resolución de tu pantalla -->
+              
+              <!-- Altura de la resolución de tu pantalla -->
+              &#10132; Altura de la resolución de tu pantalla:
+              <script type="text/javascript">document.write(window.screen.height, " pixeles")
+              </script><br>
+            </th>
+          </tr>
+        </table>
+        <!---->
+        <!---->
+        <table class="tablos">
+          <tr>
+            <th>
+              &#10132; Profundidad del color en Bits:
+              <script type="text/javascript">
+              //<![CDATA[
+              var colorDepth = window.screen.colorDepth;
+              if (colorDepth == 4)
+                document.write("16 colors");
+              else if (colorDepth == 8)	
+                document.write("256 colors");
+              else if (colorDepth > 8)
+                document.write(colorDepth + " bits");
+              else
+                document.write("Unknown");
+              //]]>
+              </script><br>
+            </th>
+          </tr>
+        </table>
+        <!---->
+                <!---->
+        <table class="tablos">
+          <tr>
+            <th>
+              &#10132; Fecha actual:
+              <script type="text/javascript">document.write (fechahoy());
+              ahora=new Date();function fechahoy(){var diasemana=new Array('Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado');var nombremes=new Array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre');var ahora;var fecha=new Date();var ano=fecha.getFullYear();var mes=fecha.getMonth();var dia=fecha.getDay();var num=fecha.getDate();ahora=diasemana[dia]+", "+num+" de "+nombremes[mes]+" de "+ano;return ahora;}
+              </script><br>
+            </th>
+          </tr>
+        </table>
+        <!---->
+                <!---->
+        <table class="tablos">
+          <tr>
+            <th>
+              &#10132; Hora local en tu PC:
+              <span id="clock"></span>
+              <script type="text/javascript">
+              //<![CDATA[
+              function doClock(){setTimeout("doClock()",1e3);t=new Date;m=t.getMonth();d=t.getDay();dt=t.getDate();y=t.getFullYear();h=t.getHours();if(h<12){ap="AM"}else{ap="PM";h=h-12}mn=pad(t.getMinutes());s=pad(t.getSeconds());if(h==0){h=12}clockID.innerHTML="Ahora son las: "+h+":"+mn+":"+s+" "+ap}function pad(a){if(a<10){a="0"+a}return a};clockID=document.getElementById('clock');doClock();
+              window.onload=function(){
+              doClock();}
+              //]]>
+              </script><br>
+            </th>
+          </tr>
+        </table>
+        <!---->
+                <!---->
+        <table class="tablos">
+          <tr>
+            <th>
+              &#10132; Tu zona horaria es:
+              <script type="text/javascript">checkTimeZone();
+              function checkTimeZone(){var rightNow=new Date();var rightNowString=rightNow.toString();var lastColon=rightNowString.lastIndexOf(":");var rightNowZone=rightNowString.substring(lastColon+4,rightNowString.length);var rightNowZone=rightNowZone.replace(/ \d\d\d\d$/,"");var rightNowZone=rightNowZone.replace(/ \d\d\d\d $/,"");var date1=new Date(rightNow.getFullYear(),0,1,0,0,0,0);var date2=new Date(rightNow.getFullYear(),6,1,0,0,0,0);var temp=date1.toGMTString();var date3=new Date(temp.substring(0,temp.lastIndexOf(" ")-1));var temp=date2.toGMTString();var date4=new Date(temp.substring(0,temp.lastIndexOf(" ")-1));var hoursDiffStdTime=(date1-date3)/(1000*60*60);var hoursDiffDaylightTime=(date2-date4)/(1000*60*60);if(hoursDiffDaylightTime==hoursDiffStdTime){document.writeln(rightNowZone+", Usas el horario normal");}else{document.writeln(rightNowZone+", Usas el horario de verano");}}
+              </script><br>
+            </th>
+          </tr>
+        </table>
+        <!---->
+                <!---->
+        <table class="tablos">
+          <tr>
+            <th>
+              &#10132; Sistema operativo:
+              <script type="text/javascript">
+              var OSName="Unknown OS";
+              if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+              if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+              if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+              if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+              document.write(OSName);
+              </script><br>
+              <!-- Hasta aqui Sistema operativo -->
+              </div><br>
+            </th>
+          </tr>
+        </table>
+        <!---->
+                <!---->
+        <table class="tablos">
+          <tr>
+            <th>
+             
+            </th>
+          </tr>
+        </table>
+        <!---->
+                <!---->
+        <table class="tablos">
+          <tr>
+            <th>
+             
+            </th>
+          </tr>
+        </table>
+        <!---->
+      </center>
+    </div>
+
+
+
+
+
+
+    <div class="marco2">
+      <!-- Ancho de la resolución de tu pantalla -->
+      
+      <!-- Hasta aqui Altura de la resolución de tu pantalla -->
+      
+      <!-- Profundidad del color en Bits -->
+
+      <!-- Hasta aqui Profundidad del color en Bits -->
+      
+      <!-- Fecha actual -->
+      
+      <!-- Hasta aqui Fecha actual -->
+      
+      <!-- Hora local en tu PC -->
+      
+      <!-- Hasta aqui Hora local en tu PC -->
+      
+      <!-- Tu zona horaria es -->
+      
+      <!-- Hasta aqui Tu zona horaria es -->
+      
+      <!-- Sistema operativo -->
+      
+
+
+      <!--
+ <div class="contenedorn1" id="titulo1">
+            <h3>Memoria: </h3>
+        </div>
+        <div class="contenedorn2" id="titulo1">
+            <h3>Procesador en uso de la maquina: </h3>
+        </div>
+        <div class="contenedorn3" id="titulo1">
+            <h3>Capacidad del disco duro: </h3>
+        </div>
+    </div>
+      -->
+      <script src="js/socket.io.js"></script>
+      <script src="js/logica.js" charset="utf-8"></script>
+</body>
+</html>
